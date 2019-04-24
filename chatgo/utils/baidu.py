@@ -51,9 +51,11 @@ class BaiduPost(object):
         return json.loads(content)['access_token']
 
 
+# api = BaiduPost()
+
 if __name__ == '__main__':
     from pprint import pprint
 
     api = BaiduPost()
-    pprint(api.predict({'data': '周杰伦'},
-                       'https://aip.baidubce.com/rpc/2.0/kg/v1/cognitive/entity_annotation'))
+    # pprint(api.predict({'data': '周杰伦'},
+    #                    'https://aip.baidubce.com/rpc/2.0/kg/v1/cognitive/entity_annotation'))
