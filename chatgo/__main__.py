@@ -20,8 +20,8 @@ def text_reply(msg):
     question = msg['Text']
     print(username, question)
 
-    if isinstance(question, str) and question.startswith('@'):
-        if question.startswith('@AI坚持') and len(question.split()) > 2:  # 多参数：项目名+入参
+    if isinstance(question, str) and question.startswith('@AI坚持'):
+        if len(question.split()) > 2:  # 多参数：项目名+入参
             args = question.split()[1:]
 
             if args[0] == '相似词':
