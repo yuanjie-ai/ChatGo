@@ -21,9 +21,8 @@ def text_reply(msg):
     print(username, question)
 
     if isinstance(question, str) and question.startswith('@'):
-
         if question.startswith('@AI坚持') and len(question.split()) > 2:  # 多参数：项目名+入参
-            _, args = question.split()
+            args = question.split()[1:]
 
             if args[0] == '相似词':
                 answer = sim.get(args[1])

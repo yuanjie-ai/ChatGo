@@ -8,7 +8,7 @@ __mtime__ = '2019/4/24'
 
 from gensim.models import fasttext
 
-model = fasttext.load_facebook_model('')
+model = fasttext.load_facebook_model('/home/yuanjie/desktop/南京小米算法共享/WordVectors/cbow.comment')
 
 
 def get(input):
