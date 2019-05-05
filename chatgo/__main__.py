@@ -31,9 +31,9 @@ def text_reply(msg):
                 answer = topnews.get(int(args[1]))
                 _send(args[0] + answer)
 
-            elif args[0] == '站会':
-                answer = meeting.get()
-                _send(args[0] + answer)
+            elif args[0] == 'meeting':
+                answer = meeting.get(args[1])
+                _send(answer)
 
 
 
