@@ -7,7 +7,11 @@ __mtime__ = '19-3-22'
 """
 
 import itchat
+<<<<<<< HEAD
 from .utils import topnews, tuling, sim, meeting
+=======
+from .utils import topnews, tuling, sim, xiaomi
+>>>>>>> 73089395a799053b76f887c5208708da3c1be7bb
 
 
 @itchat.msg_register(['Text', 'Picture'], isGroupChat=True)
@@ -31,10 +35,19 @@ def text_reply(msg):
                 answer = topnews.get(int(args[1]))
                 _send(args[0] + answer)
 
+<<<<<<< HEAD
             elif args[0] == '站会':
                 answer = meeting.get()
                 _send(args[0] + answer)
 
+=======
+            elif args[0] == 'xiaomi':
+                answer = xiaomi.get_info()
+                _send(args[0] + answer)
+
+
+
+>>>>>>> 73089395a799053b76f887c5208708da3c1be7bb
 
         else:  # 一参数：入参
             answer = tuling.get(question[6:])
