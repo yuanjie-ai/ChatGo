@@ -6,9 +6,8 @@ __author__ = 'JieYuan'
 __mtime__ = '19-3-22'
 """
 
-
 import itchat
-from .utils import topnews, tuling, sim
+from .utils import topnews, tuling, sim, meeting
 
 
 @itchat.msg_register(['Text', 'Picture'], isGroupChat=True)
@@ -30,6 +29,10 @@ def text_reply(msg):
 
             elif args[0] == 'topnews':
                 answer = topnews.get(int(args[1]))
+                _send(args[0] + answer)
+
+            elif args[0] == '站会':
+                answer = meeting.get()
                 _send(args[0] + answer)
 
 
