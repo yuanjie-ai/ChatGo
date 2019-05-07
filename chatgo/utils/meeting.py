@@ -17,7 +17,7 @@ def get(mode='merge'):
         _ = requests.get(url).json()
         _ = '\n'.join(_.get(str(dt)).values())
         return '%s 南京站会纪要：\n%s' % (dt, _)
-    elif mode == 'input':
+    else:
         url = 'http://211.159.150.211:5000/meeting'
         return '会议纪要填写：\n %s' % url
 
